@@ -5,11 +5,11 @@ import { DefaultTheme } from "styled-components";
 
 
 export const useTheme = () => {
-  const [theme, setTheme] = useState<any>(themes.dark);
+  const [theme, setTheme] = useState<DefaultTheme>(themes.dark);
   const [themeLoaded, setThemeLoaded] = useState(false);
 
-  const setMode = (mode: any) => {
-    setToLS("tsn-theme", mode.DefaultTheme);
+  const setMode = (mode: DefaultTheme) => {
+    setToLS("tsn-theme", mode.name);
     setTheme(mode);
   };
 
